@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Home | CocoMilon Cartoons"
+---
+
+<div class="hero">
+  <h1>Welcome to CocoMilon Cartoons!</h1>
+  <p class="tagline">Daily funny cartoons that make you laugh and think. {{ site.facebook_followers }} Facebook fans can't be wrong!</p>
+</div>
+
+<!-- Featured Cartoon -->
+<div class="featured-cartoon">
+  <h2>Today's Featured Cartoon</h2>
+  {% assign latest_post = site.posts.first %}
+  {% if latest_post %}
+    <div class="cartoon-container">
+      <img src="{{ latest_post.image }}" alt="{{ latest_post.image_alt }}" class="featured-image">
+      <div class="cartoon-caption">
+        <h3><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h3>
+        <p>{{ latest_post.excerpt | truncate: 150 }}</p>
+        <a href="{{ latest_post.url }}" class="read-more">View Full Cartoon & Story →</a>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<!-- Recent Posts Grid -->
+<div class="recent-posts">
+  <h2>Recent Cartoons</h2>
+  <div class="posts-grid">
+    {% for post in site.posts limit:6 %}
+      <div class="post-card">
+        <a href="{{ post.url }}">
+          <img src="{{ post.thumbnail }}" alt="{{ post.image_alt }}" class="post-thumbnail">
+          <h3>{{ post.title }}</h3>
+          <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Newsletter Signup -->
+{% include newsletter.html %}
