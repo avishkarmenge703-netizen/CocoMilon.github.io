@@ -1,0 +1,28 @@
+# Site settings
+title: "CocoMilon Cartoons"
+name: "CocoMilon"
+email: "avishkarmenge703@gmail.com"
+description: "Daily funny cartoons | Workplace humor | Life observations"
+baseurl: "" # Leave empty for GitHub Pages
+url: "https://CocoMilon.github.io" # Your GitHub Pages URL
+github_username: CocoMilon
+facebook_page: "https://www.facebook.com/profile.php?id=61576736547146" # Your Facebook page URL
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+paginate: 5
+paginate_path: "/page:num/"
+
+# Theme (Minimal theme for cartoons)
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Custom variables
+cartoonist_name: "CocoMilon"
+facebook_followers: "12k+"
+newsletter_cta: "Get daily cartoons in your inbox!"
