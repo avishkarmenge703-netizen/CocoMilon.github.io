@@ -1,0 +1,25 @@
+<header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="{{ '/' | relative_url }}">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="CocoMilon Cartoons Logo" class="logo-img">
+                <span class="logo-text">{{ site.title }}</span>
+            </a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/posts' | relative_url }}">All Cartoons</a></li>
+                <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="facebook-badge">
+            <a href="{{ site.facebook_page }}" target="_blank" class="facebook-button">
+                👍 {{ site.facebook_followers }} Facebook Fans
+            </a>
+        </div>
+    </div>
+</header>
